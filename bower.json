@@ -1,0 +1,27 @@
+{
+  "name": "horizontal-bar-chart",
+  "description": "A Polymer Element showing a bar chart of horizontal-bar elements with optional selectable behavior.",
+  "version": "1.0.0",
+  "authors": ["Next Century Corporation"],
+  "license": "Apache-2.0",
+  "keywords": [
+    "web-component",
+    "polymer"
+  ],
+  "main": "horizontal-bar-chart.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/DigElements/horizontal-bar-chart/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.7.0",
+    "horizontal-bar": "DigElements/horizontal-bar#^1.0.7",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#1.3.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.1.7",
+    "web-component-tester": "^5.0.0"
+  }
+}
