@@ -96,7 +96,7 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
         /**
          * (Optional)
          *
-         * The icon property in the each item.
+         * The icon property in each item.
          *
          * @type {String}
          * @default 'icon'
@@ -109,7 +109,7 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
         /**
          * (Optional)
          *
-         * The ID property in the each item.
+         * The ID property in each item.
          *
          * @type {String}
          * @default 'id'
@@ -122,7 +122,7 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
         /**
          * (Optional)
          *
-         * The link property in the each item.
+         * The link property in each item.
          *
          * @type {String}
          * @default 'link'
@@ -135,7 +135,7 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
         /**
          * (Optional)
          *
-         * The max property in the each item.
+         * The max property in each item.
          *
          * @type {String}
          * @default 'max'
@@ -148,7 +148,20 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
         /**
          * (Optional)
          *
-         * The style class property in the each item.
+         * The select property in each item.  Note that the item itself is never changed; the select property only determines if the item starts selected.
+         *
+         * @type {String}
+         * @default 'select'
+         */
+        selectProperty: {
+          type: String,
+          value: 'select'
+        },
+
+        /**
+         * (Optional)
+         *
+         * The style class property in each item.
          *
          * @type {String}
          * @default 'styleClass'
@@ -161,7 +174,7 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
         /**
          * (Optional)
          *
-         * The text property in the each item.
+         * The text property in each item.
          *
          * @type {String}
          * @default 'text'
@@ -220,7 +233,7 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
          * @private
          */
         _templateData: {
-          computed: '_computeTemplateData(data)',
+          computed: '_computeTemplateData(data, selectProperty)',
           type: Array
         }
       },
@@ -229,14 +242,16 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
        * Returns the list of data objects to use in the dom-repeat template that each have an item from the input data and the selected status.
        *
        * @param {Array} data
+       * @param {String} selectProperty
        * @return {Array}
        * @private
        */
-      _computeTemplateData: function(data) {
+      _computeTemplateData: function(data, selectProperty) {
         return data.map(function(item) {
           return {
             item: item,
-            selected: false
+            // Ensure that the selected property is set to a boolean because the paper-checkbox may look strange if it is left undefined.
+            selected: item[selectProperty] || false
           };
         });
       },
