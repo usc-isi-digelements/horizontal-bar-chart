@@ -52,6 +52,7 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
           max="[[_getProperty(object.item, maxProperty)]]"
           name="[[_getProperty(object.item, textProperty)]]"
           style-class="[[_getProperty(object.item, styleClassProperty)]]"
+          target="[[target]]"
           show-checkbox="[[showCheckboxes]]"
           checkbox-tooltip="[[_getCheckboxTooltip(object.item, textProperty, checkboxName)]]"
           toggle-listener="[[_createToggleListener()]]"
@@ -182,6 +183,19 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
         textProperty: {
           type: String,
           value: 'text'
+        },
+
+        /**
+         * (Optional)
+         *
+         * The target page of the links.
+         *
+         * @type {String}
+         * @default '_self'
+         */
+        target: {
+          type: String,
+          value: '_self'
         },
 
         /**
