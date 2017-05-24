@@ -248,7 +248,7 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
          * @private
          */
         _templateData: {
-          computed: '_computeTemplateData(data, selectProperty)',
+          computed: '_computeTemplateData(data, idProperty, selectProperty)',
           type: Array
         }
       },
@@ -261,12 +261,13 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
        * @return {Array}
        * @private
        */
-      _computeTemplateData: function(data, selectProperty) {
+      _computeTemplateData: function(data, idProperty, selectProperty) {
+        var self = this;
         return data.map(function(item) {
           return {
             item: item,
             // Ensure that the selected property is set to a boolean because the paper-checkbox may look strange if it is left undefined.
-            selected: item[selectProperty] || false
+            selected: item[selectProperty] || (self.selectedIds.indexOf(item[idProperty]) >= 0) || false
           };
         });
       },
