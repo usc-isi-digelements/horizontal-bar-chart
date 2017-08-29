@@ -18,26 +18,28 @@ limitations under the License.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+  <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
   <link rel="import" href="../horizontal-bar-chart.html">
 </head>
 
 <body unresolved>
-  <template is="dom-bind" id="demo">
-    <p>Show Checkboxes: true</p>
-    <p>Data: [[stringData]]</p>
-    <p>Selected Ids:  [[selected]]</p>
+  <dom-bind id="demo">
+    <template is="dom-bind">
+      <p>Show Checkboxes: true</p>
+      <p>Data: [[stringData]]</p>
+      <p>Selected Ids:  [[selected]]</p>
 
-    <horizontal-bar-chart
-      show-checkboxes
-      data="[[data]]"
-      selected-ids="{{selected}}">
-    </horizontal-bar-chart>
-  </template>
+      <horizontal-bar-chart
+        show-checkboxes
+        data="[[data]]"
+        selected-ids="{{selected}}">
+      </horizontal-bar-chart>
+    </template>
+  </dom-bind>
 
   <script>
     (function(document) {
-      var demo = document.querySelector('#demo');
+      var demo = document.querySelector('dom-bind');
       demo.data = [{
         count: 10,
         icon: 'icons:polymer',

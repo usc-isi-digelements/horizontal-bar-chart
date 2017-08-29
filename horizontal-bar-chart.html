@@ -76,9 +76,13 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
          * The data.
          *
          * @type {Array}
+         * @default []
          */
         data: {
-          type: Array
+          type: Array,
+          value: function() {
+            return [];
+          }
         },
 
         /**
