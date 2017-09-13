@@ -11,6 +11,18 @@ A Polymer Element showing a bar chart of horizontal-bar elements with optional s
 </horizontal-bar-chart>
 ```
 
+### Styling
+
+`<horizontal-bar-chart>` provides the following custom properties and mixins for styling:
+
+Custom property                            | Description                                         | Default
+-------------------------------------------|-----------------------------------------------------|--------
+`--horizontal-bar-chart-color`             | The color of the bars.                              | --paper-grey-300
+`--horizontal-bar-chart-count-color`       | The color of the count labels.                      | --paper-grey-900
+`--horizontal-bar-chart-height`            | The height of the bars.                             | 20px
+`--horizontal-bar-chart-title-color`       | The color of the title labels.                      | --paper-grey-900
+`--horizontal-bar-chart-title-hover-color` | The color of the title labels on hover (if a link). | --paper-grey-600
+
 ### Dependencies
 
 Dependencies are installed using [Bower](http://bower.io/):
