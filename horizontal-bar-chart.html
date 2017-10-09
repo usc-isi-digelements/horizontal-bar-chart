@@ -64,7 +64,7 @@ Custom property                                | Description                    
       }
     </style>
 
-    <template is="dom-repeat" items="[[_templateData]]" as="object">
+    <template is="dom-repeat" items="[[_templateData]]" as="object" initial-count="10">
       <div class="flex">
         <horizontal-bar
           count="[[_getProperty(object.item, countProperty)]]"
