@@ -77,7 +77,7 @@ Custom property                                | Description                    
           style-class="[[_getProperty(object.item, styleClassProperty)]]"
           target="[[target]]"
           show-checkbox="[[showCheckboxes]]"
-          checkbox-tooltip="[[_getCheckboxTooltip(object.item, textProperty, checkboxName)]]"
+          checkbox-tooltip="[[_getCheckboxTooltip(object.item, textProperty, checkboxName, object.selected)]]"
           toggle-listener="[[_createToggleListener(object)]]"
           selected="{{object.selected}}">
         </horizontal-bar>
@@ -390,11 +390,12 @@ Custom property                                | Description                    
        * @param {Object} item
        * @param {String} textProperty
        * @param {String} checkboxName
+       * @param {Boolean} selected
        * @return {String}
        * @private
        */
-      _getCheckboxTooltip: function(item, textProperty, checkboxName) {
-        return 'Toggle ' + checkboxName + ' on ' + item[textProperty];
+      _getCheckboxTooltip: function(item, textProperty, checkboxName, selected) {
+        return 'Click to ' + (selected ? 'Remove ' : 'Add ') + checkboxName + ' on ' + item[textProperty];
       },
 
       /**

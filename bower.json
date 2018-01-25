@@ -1,7 +1,7 @@
 {
   "name": "horizontal-bar-chart",
   "description": "A Polymer Element showing a bar chart of horizontal-bar elements with optional selectable behavior.",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "authors": ["Next Century Corporation"],
   "license": "Apache-2.0",
   "keywords": [
