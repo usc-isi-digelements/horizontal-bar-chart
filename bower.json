@@ -2,7 +2,7 @@
   "name": "horizontal-bar-chart",
   "description":
     "A Polymer Element showing a bar chart of horizontal-bar elements with optional selectable behavior.",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "authors": ["Next Century Corporation"],
   "license": "Apache-2.0",
   "keywords": ["web-component", "polymer"],
@@ -11,7 +11,7 @@
   "ignore": ["/.*", "/test/"],
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.2",
-    "horizontal-bar": "usc-isi-digelements/horizontal-bar#2.3.0",
+    "horizontal-bar": "usc-isi-digelements/horizontal-bar#^2.3.1",
     "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.0",
     "paper-styles": "PolymerElements/paper-styles#^2.0.0"
   },
